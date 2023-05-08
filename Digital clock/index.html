@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock Using Javascript</title>
+
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- **** Classes and ID's for styling purpose ***** -->
+    <div class="wrapper">
+        <div class="display">
+            <div id="time"></div>
+            <h1 id="clkId"></h1> 
+        </div>
+    </div>
+
+    <script>
+
+        // JS Function for displaying current time 
+       function Clock() {
+
+        // Date() : for Timing
+        let Time = new Date();
+        let CurTime = Time.toLocaleTimeString(); 
+        document.getElementById('clkId').innerHTML = CurTime;
+       } 
+
+       let ChangeTime = setInterval(Clock,1000)
+    </script>
+
+</body>
+</html>
